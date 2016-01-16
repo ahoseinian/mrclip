@@ -1,0 +1,21 @@
+extends ../layout
+
+block content
+	h1 new
+	
+	.row
+		.col-xs-12.col-md-6
+			form(method="post", action="/clips", name="test", enctype="multipart/form-data")
+				fieldset.form-group
+					input.form-control(placeholder="title", name="title", required)
+				fieldset.form-group
+					textarea.form-control(placeholder="body", name="body", required)
+				fieldset.form-group
+					label CLIP:
+					input(type="file", name="clip", required)
+				fieldset.form-group
+					label IMAGE:
+					input(type="file", name="image", required)
+				button.btn.btn-primary Submit
+				
+				

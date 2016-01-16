@@ -1,0 +1,47 @@
+{
+  "name": "mrclip",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "angular": "^1.4.8",
+    "angular-sanitize": "^1.4.8",
+    "angular-ui-router": "^1.0.0-alpha0",
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "~1.13.2",
+    "connect-mongo": "^1.1.0",
+    "cookie-parser": "~1.3.5",
+    "debug": "~2.2.0",
+    "express": "~4.13.1",
+    "express-session": "^1.13.0",
+    "formidable": "^1.0.17",
+    "jade": "~1.11.0",
+    "lwip": "0.0.8",
+    "mongoose": "^4.3.4",
+    "mongoose-unique-validator": "^0.6.2",
+    "morgan": "~1.6.1",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "~2.3.0",
+    "videogular": "^1.4.0",
+    "videogular-angulartics": "^1.4.0",
+    "videogular-buffering": "^1.4.0",
+    "videogular-controls": "^1.4.0",
+    "videogular-dash": "^1.4.0",
+    "videogular-ima-ads": "^1.4.0",
+    "videogular-overlay-play": "^1.4.0",
+    "videogular-poster": "^1.4.0",
+    "videogular-themes-default": "^1.4.0"
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^3.0.2",
+    "eslint-plugin-react": "^3.14.0",
+    "gulp-angular-templatecache": "^1.8.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.0.6",
+    "gulp-sass": "^2.1.1"
+  }
+}

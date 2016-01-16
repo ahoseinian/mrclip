@@ -1,0 +1,20 @@
+<div class="row">
+  <div class="col-xs-12 col-md-5">
+    <div class="card">
+      <div class="card-header">
+        <h1>ورود</h1>
+      </div>
+
+      <form novalidate action="/auth/login" method="post" class="card-block">
+        <fieldset class="form-group">
+          <input type="text" class="form-control" placeholder="email" name="email">
+        </fieldset>
+        <fieldset class="form-group">
+          <input type="password" class="form-control" placeholder="password" name="password">
+        </fieldset>
+        <button type="submit" class="btn btn-block btn-primary btn-sm">ورود</button>
+        <button ui-sref="app.signup" class="btn btn-link center-block"> ثبت نام </button>
+      </form>
+    </div>
+  </div>
+</div>

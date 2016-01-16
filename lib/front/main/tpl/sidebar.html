@@ -1,0 +1,15 @@
+<div class="card sidebar">
+  <div class="card-header">
+    <h4>Clips</h4>
+  </div>
+  <div class="card-block">
+    <ul class="no-style p-a-0">
+      <li ng-repeat="item in vm.clips">
+        <a ui-sref="app.clip.show({id: item._id, title: item.title})">
+          <img ng-src="/images/200/{{item._id}}.jpg" alt="{{item.title}}" class="clip-image">
+          <p class="title">{{item.title}}</p>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+{
+  "name": "mrclip",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Amir Hoseinian <amir.anyware@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~4"
+  }
+}

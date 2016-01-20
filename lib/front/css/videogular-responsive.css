@@ -1,4 +1,8 @@
 .videogular-container {
-	direction: ltr;
+  direction: ltr;
+  height: 400px;
 }
- 
+
+videogular vg-scrub-bar-current-time {
+  left: 0;
+}

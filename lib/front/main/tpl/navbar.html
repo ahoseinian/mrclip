@@ -18,6 +18,12 @@
         <li class="nav-item">
           <a class="nav-link">{{user.fullname}}</a>
         </li>
+        <li class="nav-item" ng-if="user.admin">
+          <a class="nav-link" href="/clips/new" target="_self">
+            <span class="fa fa-plus fa-fw"></span>
+            <span>آپلود</span>
+          </a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="/auth/logout" target="_self">خروج</a>
         </li>

@@ -3,7 +3,7 @@ extends layout
 block content
   span(ng-init="user = " + JSON.stringify(user))
   div(ui-view="navbar")
-  .row
+  .row.m-t-3.p-t-2
     .col-md-3
       div(ui-view="sidebar")
     .col-md-9

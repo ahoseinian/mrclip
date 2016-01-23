@@ -1,6 +1,6 @@
 <div class="card">
   <div class="card-header">
-    <h1>comments</h1>
+    <h4>نظرات</h4>
   </div>
   <ul class="list-group list-group-flush">
     <li ng-repeat="cm in vm.item.comments" class="list-group-item">
@@ -11,7 +11,7 @@
     </li>
   </ul>
   <div class="card-footer clearfix">
-    <form ng-submit="vm.item.$addCm(comment)" name="commentForm">
+    <form ng-submit="vm.item.$addCm(comment)" name="commentForm" ng-if="user">
       <fieldset class="form-group">
         <textarea class="form-control" name="comment" ng-model="comment" rows="3" ng-minlength="20" required></textarea>
         <span class="text-danger" ng-show="commentForm.comment.$dirty && commentForm.comment.$invalid"> حداقل ۲۰ کاراکتر </span>
@@ -21,6 +21,9 @@
         <span>ارسال</span>
       </button>
     </form>
+    <p ng-if="!user">
+      برای ثبت نظر ابتدا باید <a ui-sref="app.login">وارد شوید</a>
+    </p>
   </div>
 </div>
 

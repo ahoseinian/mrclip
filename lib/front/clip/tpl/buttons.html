@@ -1,0 +1,25 @@
+<!-- thumbs -->
+<div class="btn-group pull-xs-left" role="group">
+  <button type="button" class="btn btn-secondary" ng-click="vm.item.$thumb(1)" ng-disabled="!user">
+    <small>{{vm.item.thumbs.down}}</small>
+    <span class="fa fa-thumbs-down fa-flip-horizontal fa-fw"></span>
+  </button>
+  <span type="button" class="btn btn-secondary hover-normal">
+      <span class="fa fa-eye fa-fw"></span>
+  <small>{{vm.item.viewCount}}</small>
+  </span>
+  <button type="button" class="btn btn-secondary" ng-click="vm.item.$thumb(2)" ng-disabled="!user">
+    <span class="fa fa-thumbs-up fa-fw"></span>
+    <small>{{vm.item.thumbs.up}}</small>
+  </button>
+</div>
+
+<!-- other buttons -->
+<div class="btn-group pull-xs-left m-x-1" role="group">
+  <span type="button" class="btn btn-secondary hover-normal">
+      <small>{{vm.item.size | bytes}}</small>
+    </span>
+  <a class="btn btn-secondary text-xs-left" href="{{vm.item.address}}" target="_self" download>
+    <span class="fa fa-download fa-fw"></span>
+  </a>
+</div>

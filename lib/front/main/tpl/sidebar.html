@@ -1,17 +1,19 @@
 <div class="card sidebar">
   <div class="card-header">
-    <h4>Clips</h4>
+    <h4> کلیپ ها</h4>
   </div>
-  <div class="card-block">
-    <ul class="no-style p-a-0">
-      <li ng-repeat="item in vm.clips" class="clearfix p-b-1">
-        <a ui-sref="app.clip.show({id: item._id, title: item.title})">
-          <p class="title">
-            <img ng-src="/images/200/{{item._id}}.jpg" alt="{{item.title}}" class="clip-image pull-xs-right">
-            <span class="p-r-1">{{item.title}}</span>
-          </p>
-        </a>
-      </li>
-    </ul>
-  </div>
+  <ul class="list-group list-group-flush">
+    <li ng-repeat="item in vm.clips" class="clearfix p-b-1 list-group-item">
+      <a ui-sref="app.clip.show({id: item._id, title: item.title})">
+        <p class="title">
+          <img ng-src="/images/200/{{item._id}}.jpg" alt="{{item.title}}" class="clip-image pull-xs-right m-l-1">
+          <span>{{item.title}}</span>
+        </p>
+        <div class="text-muted">
+          <small>بازدید:</small>
+          <small> {{item.viewCount}}</small>
+        </div>
+      </a>
+    </li>
+  </ul>
 </div>

@@ -1,3 +1,11 @@
 <div ng-include="'clip/tpl/player.html'"></div>
-<h1>{{vm.item.title}}</h1>
+<div class="clearfix p-a-1">
+  <h1 class="pull-xs-right">  
+    <span>{{vm.item.title}}</span>
+  </h1>
+  <!-- buttons -->
+  <div ng-include="'clip/tpl/buttons.html'"></div>
+</div>
+<p class="p-r-2">{{vm.item.body}}</p>
+
 <div ng-include="'clip/tpl/comments.html'"></div>

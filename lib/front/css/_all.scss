@@ -1,0 +1,18 @@
+@mixin gradient-bg() {
+  background: #fcd151;
+  background: -moz-linear-gradient(top, #fcd151 0%, #fbba28 100%);
+  background: -webkit-linear-gradient(top, #fcd151 0%, #fbba28 100%);
+  background: linear-gradient(to bottom, #fcd151 0%, #fbba28 100%);
+}
+
+.card-header, .navbar {
+  @include gradient-bg();
+}
+
+a:hover{
+  text-decoration: none;
+}
+
+.hover-normal:hover{
+  cursor: initial;
+}

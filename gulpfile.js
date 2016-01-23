@@ -42,7 +42,7 @@ gulp.task('watch', function () {
   gulp.watch(['lib/back/**/*.js', 'views/**/*.jade', 'public/js/**/*.html', 'public/**/*.js', 'public/**/*.css'], function () {
     livereload.reload();
   });
-  gulp.watch(['./bower_components/bootstrap/scss/bootstrap.scss', 'lib/front/**/*.css', 'lib/front/**/*.scss'], ['sass']);
+  gulp.watch(['./bower_components/bootstrap/scss/*.scss', 'lib/front/**/*.css', 'lib/front/**/*.scss'], ['sass']);
   gulp.watch('lib/front/**/*.html', ['templates']);
 });
 

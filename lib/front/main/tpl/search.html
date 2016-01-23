@@ -1,0 +1,27 @@
+<div class="search-container">
+  <div class="input-group">
+    <span class="input-group-addon">
+    <span class="fa fa-search"></span>
+    </span>
+    <input type="text" class="form-control" ng-model="vm.query" ng-change="vm.search(vm.query)">
+  </div>
+  <div class="query-box-container" ng-show="vm.searching">
+    <div class="query-box">
+      <p class="text-muted p-r-1 m-b-0" ng-show="vm.query">
+        <small> جستجوی : </small>
+        <small> {{vm.query}} </small>
+        <small> ... </small>
+      </p>
+
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item" ng-repeat="clip in vm.clips" ng-click="vm.choose(clip.title)">
+          <a class="display-block" ui-sref="app.clip.show({id: clip._id, title: clip.title})">
+            <span>{{clip.title}}</span>
+          </a>
+        </li>
+      </ul>
+      <p ng-if="vm.clips.length == 0" class="m-r-3">موردی یافت نشد ... </p>
+
+    </div>
+  </div>
+</div>

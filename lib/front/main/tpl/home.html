@@ -1,1 +1,26 @@
-<!-- <h3>Home view</h3> -->
+<div class="card home-container">
+  <div class="card-header">
+    <h5>پر امتیاز ترینها</h5>
+  </div>
+  <div class="card-block">
+
+    <div class="row">
+      <div class="col-xs-12 col-md-3" ng-repeat="item in vm.clips | orderBy: '-score'">
+        <div class="card">
+          <a ui-sref="app.clip.show({id: item._id, title: item.title})">
+            <img ng-src="/images/150/{{item._id}}.jpg" alt="{{item.title}}" class="card-img-top full-width">
+          </a>
+          <div class="card-block">
+            <a ui-sref="app.clip.show({id: item._id, title: item.title})">
+              <h4 class="card-title">{{item.title}}</h4>
+            </a>
+            <p class="card-text">{{item.body}}</p>
+            <div ng-include="'main/tpl/progress.html'"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

@@ -5,14 +5,19 @@
   background: linear-gradient(to bottom, #fcd151 0%, #fbba28 100%);
 }
 
-.card-header, .navbar {
+.card-header,
+.navbar {
   @include gradient-bg();
 }
 
-a:hover{
+a:hover {
   text-decoration: none;
 }
 
-.hover-normal:hover{
+.hover-normal:hover {
   cursor: initial;
+}
+
+.full-width {
+  width: 100%;
 }

@@ -3,33 +3,46 @@
     &#9776;
   </button>
   <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
-    <a class="navbar-brand" ui-sref="app.home" ui-sref-active="active">
-      <img src="/images/logo.png" alt="mr clip" class="pull-xs-right p-l-1">
-      آقای کلیپ</a>
-    <ul class="nav navbar-nav">
-      <div class="pull-xs-left" ng-if="!user">
-        <li class="nav-item" ui-sref-active="active">
-          <a class="nav-link" ui-sref="app.login">ورود</a>
-        </li>
-        <li class="nav-item" ui-sref-active="active">
-          <a class="nav-link" ui-sref="app.signup">ثبت نام</a>
-        </li>
+    <div class="row">
+
+      <div class="col-xs-12 col-md-2">
+        <a class="navbar-brand" ui-sref="app.home" ui-sref-active="active">
+          <img src="/images/logo.png" alt="mr clip" class="pull-xs-right p-l-1"> آقای کلیپ</a>
       </div>
 
-      <div class="pull-xs-left" ng-if="user">
-        <li class="nav-item">
-          <a class="nav-link">{{user.fullname}}</a>
-        </li>
-        <li class="nav-item" ng-if="user.admin">
-          <a class="nav-link" href="/clips/new" target="_self">
-            <span class="fa fa-plus fa-fw"></span>
-            <span>آپلود</span>
-          </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="/auth/logout" target="_self">خروج</a>
-        </li>
+      <div class="col-xs-12 col-md-7">
+        <div ng-include="'main/tpl/search.html'"></div>
       </div>
-    </ul>
+
+      <div class="col-xs-12 col-md-3">
+        <ul class="nav navbar-nav">
+          <div class="pull-xs-left" ng-if="!user">
+            <li class="nav-item" ui-sref-active="active">
+              <a class="nav-link" ui-sref="app.login">ورود</a>
+            </li>
+            <li class="nav-item" ui-sref-active="active">
+              <a class="nav-link" ui-sref="app.signup">ثبت نام</a>
+            </li>
+          </div>
+
+          <div class="pull-xs-left" ng-if="user">
+            <li class="nav-item">
+              <a class="nav-link">{{user.fullname}}</a>
+            </li>
+            <li class="nav-item" ng-if="user.admin">
+              <a class="nav-link" href="/clips/new" target="_self">
+                <span class="fa fa-plus fa-fw"></span>
+                <span>آپلود</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/auth/logout" target="_self">خروج</a>
+            </li>
+          </div>
+        </ul>
+      </div>
+
+    </div>
+
   </div>
 </nav>
